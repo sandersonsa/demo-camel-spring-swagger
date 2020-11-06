@@ -9,7 +9,7 @@ public class PrincipalRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        rest("/say")
+        rest("/say").description("Boa noite")
             .get("/hello").to("direct:hello")
             .get("/bye").consumes("application/json").to("direct:bye");
 
